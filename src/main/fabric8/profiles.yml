@@ -1,0 +1,10 @@
+- name: basic
+  enricher:
+    includes:
+    - fmp-controller
+    - fmp-service
+    excludes:
+    - f8-icon
+    config:
+      fmp-service:
+        type: NodePort

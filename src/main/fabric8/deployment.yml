@@ -1,0 +1,47 @@
+metadata:
+  labels:
+    project: ${project.artifactId}
+    version: ${project.version}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        project: ${project.artifactId}
+        version: ${project.version}
+
+############################################################################
+
+##TO ADD A SECRET EDIT THIS SECTION
+
+#apiVersion: v1
+#kind: Secret
+#metadata:
+#  name: mydockerkey
+#  namespace: default
+#  annotations:
+#    maven.fabric8.io/dockerServerId: ${docker.registry}
+#type: kubernetes.io/dockercfg
+
+############################################################################
+
+### TO ADD A CONFIG MAP EDIT THIS SECTION
+
+## Create a configmap.yml in the same directory
+## Add this spec to the deployment
+#  template:
+#    spec:
+#      volumes:
+#        - name: config
+#          configMap:
+#            name: ${project.artifactId}
+#            items:
+#            - key: application.properties
+#              path: application.properties
+#      containers:
+#        - volumeMounts:
+#            - name: config
+#              mountPath: /deployments/config
+
+############################################################################
+

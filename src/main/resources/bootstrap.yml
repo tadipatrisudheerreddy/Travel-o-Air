@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ms-travel-website
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+        strategy: restart-context
+        mode: polling
+        period: 5000
+        

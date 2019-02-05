@@ -1,0 +1,7 @@
+metadata:
+  name: ms-travel-website
+data:
+  application.properties: |-
+    travel.service.source=Local v1
+    travel.service.destination=Kubernetes
+    greeter.message=Hello !
